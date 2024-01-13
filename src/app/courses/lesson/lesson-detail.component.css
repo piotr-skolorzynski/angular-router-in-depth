@@ -1,11 +1,13 @@
-
 .video-container {
   display: flex;
   align-items: center;
 }
 
-h3, h2, h5, .back {
-  font-family: 'Roboto';
+h3,
+h2,
+h5,
+.back {
+  font-family: "Roboto";
 }
 
 .back {
