@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { CourseResolver } from "./services/course.resolver";
+import { courseResolver } from "./services/course.resolver";
+import { lessonsResolver } from "./services/lessons.resolver";
 import { HomeComponent } from "./home/home.component";
 import { CourseComponent } from "./course/course.component";
 import { LessonDetailComponent } from "./lesson/lesson-detail.component";
@@ -18,13 +19,14 @@ const routes: Routes = [
       {
         path: "",
         component: LessonsListComponent,
+        resolve: { lessons: lessonsResolver },
       },
       {
         path: "lessons/:lessonSeqNo",
         component: LessonDetailComponent,
       },
     ],
-    resolve: { course: CourseResolver },
+    resolve: { course: courseResolver },
   },
 ];
 
