@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, inject } from "@angular/core";
 import { AuthStore } from "./services/auth.store";
 
 @Component({
@@ -7,7 +7,7 @@ import { AuthStore } from "./services/auth.store";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent implements OnInit {
-  constructor(public auth: AuthStore) {}
+  auth = inject(AuthStore);
 
   ngOnInit() {}
 
