@@ -8,6 +8,7 @@ import {
 import { LoginComponent } from "./login/login.component";
 import { AboutComponent } from "./about/about.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { canLoadAuthGuard } from "./services/can-load-auth.guard";
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
     path: "courses",
     loadChildren: () =>
       import("./courses/courses.module").then((m) => m.CoursesModule),
+    canMatch: [canLoadAuthGuard],
   },
   {
     path: "login",
