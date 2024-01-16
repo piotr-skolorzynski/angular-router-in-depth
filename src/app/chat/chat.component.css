@@ -1,5 +1,3 @@
-
-
 .chat-container {
   position: fixed;
   bottom: 70px;
@@ -23,7 +21,6 @@
   margin-top: 10px;
   display: flex;
   justify-content: flex-end;
-
 }
 
 .chat-container .buttons-container button {
